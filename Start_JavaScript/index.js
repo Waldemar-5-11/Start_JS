@@ -176,3 +176,190 @@
 
 
 
+// function sumTwoNumbers(num1, num2){
+//     return (num1 + num2)/2;
+// }
+// // sumTwoNumbers(4, 6);
+
+// let num1=4;
+// let num2=6;
+
+// let result = sum(num1, num2) /2;
+// console.log(result);
+
+
+
+function getMenu() {
+    let choice = prompt('Виберіть напій:1 - Чай, 2 - Кава, 3 - Сік');
+    if (choice === '1') {
+        alert("Ви обрали чай");
+    }else if (choice === '2'){
+        alert("Ви обрали каву");
+    }else if (choice === '3'){
+        alert("Ви обрали сік");
+    }else{
+        alert("Я не знаю такого напою");
+    }    
+    return choice;
+    }
+    getMenu();
+
+function getDayWeek() {
+    let choice = prompt("Виберіть день:\n1 - понеділок\n2 - вівторок\n3 - середа\n4 - четвер\n5 - п'ятниця\n6 - субота\n7 - неділя");
+        switch (choice) {
+        case "1":
+            alert("Ви обрали понеділок");
+            console.log('monday');
+            break;
+        case "2":
+            alert("Ви обрали вівторок");
+            console.log('tuesday');
+            break;
+        case "3":
+            alert("Ви обрали середа");
+            console.log('wednesday');
+            break;
+        case "4":
+            alert("Ви обрали четвер");
+            console.log('thursday');
+            break;
+        case "5":
+            alert("Ви обрали п'тниця");
+            console.log('friday');
+            break;
+        case "6":
+            alert("Ви обрали субота");
+            console.log('saturday');
+            break;
+        case "7":
+            alert("Ви обрали неділя");
+            console.log('sunday');
+            break;
+        default:
+            alert("Я не знаю такого дня");
+        }
+    }
+    getDayWeek();
+
+
+
+    function calculator() {
+        const num1 = parseFloat(prompt('Введіть перше число:'));
+        const num2 = parseFloat(prompt('Введіть друге число:'));
+        const operation = prompt(`Виберіть дію:
+        + щоб скласти
+        - щоб відняти
+        * щоб перемножити
+        / щоб поділити`);
+        
+        let result;
+        
+        switch(operation) {
+        case '+':
+            result = num1 + num2;
+            break;
+        case '-':
+            result = num1 - num2;
+            break;
+        case '*':
+            result = num1 * num2;
+            break;
+        case '/':
+            result = num1 / num2;
+            break;
+        default:
+            alert('Ви ввели неправильну операцію!');
+            return;
+        }
+        
+        console.log(`Результат: ${result}`);
+        alert(`Результат: ${result}`);
+        
+        return result;
+    }
+    calculator();
+
+      
+
+//Доопрацювати калькулятор
+    // function getCalc() {
+    // let choice = Number(prompt('type first number'));
+    // let choice2 = Number(prompt('type second number'));
+    // let action = prompt ('Choose operation');
+    //     switch (action) {
+    //     case '+':
+    //         result = sum(num1, num2);
+    //         break;
+    //     case '-':
+    //         result = sub(num1, num2);
+    //         break;
+    //     case '*':
+    //         result = multiply(num1, num2);
+    //         break;
+    //     case '/':
+    //         result = divide(num1, num2);
+    //         break;
+
+    //     default:
+    //         return false;
+    //     }
+
+    //     function sum(a, b){
+    //         return a + b;
+    //     }
+    //     function sub(a, b){
+    //         return a - b;
+    //     }
+    //     function multiply(a, b){
+    //         return a * b;
+    //     }
+    //     function divide(a, b){
+    //         return a / b;
+    //     }
+    // }    
+
+    // getCalc();
+
+ 
+
+
+/* ЦИКЛИ */
+
+
+//     let counter = 0;
+
+// while(counter <=10){
+//     if (counter % 2 === 0){
+//         console.log(counter)
+//     }
+//     counter++;
+// }
+
+
+
+// let number = 0;
+// while(number <=15){
+//     if ((number % 3 === 0)&&(number % 5 === 0)){
+//         console.log(number)
+//     }
+//     number++;
+// }
+
+
+// let sum = 0;
+// let counter = 0;
+// while(counter++ <=20){
+//     sum += counter;
+//     counter++;
+// }
+// console.log(sum);
+
+
+// do {
+    
+// }while(gogi)
+
+// debugger;
+// for(let counter = 0;counter < 10; counter++){
+//     console.log(counter);
+// }
