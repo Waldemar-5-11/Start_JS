@@ -423,138 +423,227 @@
 
 
 
-//Функціїї конструктора 'this' 'new'
+// //Функціїї конструктора 'this' 'new'
 
-    let car = {
-        brrand: 'Ford',
-        type: 'picup',
-        engine: 3.5,
-        capasity: 5
-    }
+//     let car = {
+//         brrand: 'Ford',
+//         type: 'picup',
+//         engine: 3.5,
+//         capasity: 5
+//     }
 
-    const isColor = 'color' in car;
+//     const isColor = 'color' in car;
 
-    for (const key in car){
-        console.log(key, car[key]);
-    }
+//     for (const key in car){
+//         console.log(key, car[key]);
+//     }
 
 
-    const obj1 = {
-        test: 'value',
-        color: 'red',
-        waight: 5
-    } 
+//     const obj1 = {
+//         test: 'value',
+//         color: 'red',
+//         waight: 5
+//     } 
 
-    const obj2 = {
-        test: 'value',
-        color: 'red',
-        waight: 5
-    }
+//     const obj2 = {
+//         test: 'value',
+//         color: 'red',
+//         waight: 5
+//     }
 
-    function isObjEquals(obj1, obj2){
-        for(const key in obj1){
-            if (obj1[key]===obj2[key]){
-                continue
-            }
-            return true;
-        }
-    }
+//     function isObjEquals(obj1, obj2){
+//         for(const key in obj1){
+//             if (obj1[key]===obj2[key]){
+//                 continue
+//             }
+//             return true;
+//         }
+//     }
 
-    const obj3 = {
-        test: 'value',
-        color: 'red',
-        waight: 5
-    } 
+//     const obj3 = {
+//         test: 'value',
+//         color: 'red',
+//         waight: 5
+//     } 
 
-    const obj4 = {
+//     const obj4 = {
 
-    }
-    function isObjEquals(obj1, obj2){
-        for(const key in obj1){
-            if (obj3[key])
-                return false;
+//     }
+//     function isObjEquals(obj1, obj2){
+//         for(const key in obj1){
+//             if (obj3[key])
+//                 return false;
             
-        }
-        console.log();
-    }
+//         }
+//         console.log();
+//     }
 
-    const cat1 = {
-        name: 'Murik',
-        age: 5,
-        color: 'red'
-    }
-    const cat2 = {
-        name: 'Barsik',
-        age: 3,
-        color: 'black'
-    }
-    const cat3 = {
-        name: 'Gogi',
-        age: 2,
-        color: 'grey'
-    }
+//     const cat1 = {
+//         name: 'Murik',
+//         age: 5,
+//         color: 'red'
+//     }
+//     const cat2 = {
+//         name: 'Barsik',
+//         age: 3,
+//         color: 'black'
+//     }
+//     const cat3 = {
+//         name: 'Gogi',
+//         age: 2,
+//         color: 'grey'
+//     }
 
-    function Cat(name, age, color){
-        // new -> створюється {}
-        this.name = name;
-        this.age = age;
-        this.color = color;
-        this.sayMeow = function(){
-            return 'MEOWWWW'
-        }
-    }
+//     function Cat(name, age, color){
+//         // new -> створюється {}
+//         this.name = name;
+//         this.age = age;
+//         this.color = color;
+//         this.sayMeow = function(){
+//             return 'MEOWWWW'
+//         }
+//     }
     
 
-    const blackCat = new Cat('Thor',3,'violet')
-    const topCat = new Cat('Chico',7,'pink')
+//     const blackCat = new Cat('Thor',3,'violet')
+//     const topCat = new Cat('Chico',7,'pink')
 
 
-    const cat5 = {
-        name: 'Ramses',
-        age: 7,
-        color: 'grey',
-        askForFood: function(){
-            return `${this.name} wants to eat`;
-        }
-    }
+//     const cat5 = {
+//         name: 'Ramses',
+//         age: 7,
+//         color: 'grey',
+//         askForFood: function(){
+//             return `${this.name} wants to eat`;
+//         }
+//     }
 
-    function User(firstName, lastName, age, email){
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.age = age;
-        this.email = email;
-        this.sayHello = function(){
-            return `${this.firstName} say:'Hello'`
-        }
-    }
-    const u1 = new User('John', 'Doe', 23, 'doe@ls.com');
-    const u2 = new User('Diana', 'Pig', 53, 'DP@tp.com');
-
-
+//     function User(firstName, lastName, age, email){
+//         this.firstName = firstName;
+//         this.lastName = lastName;
+//         this.age = age;
+//         this.email = email;
+//         this.sayHello = function(){
+//             return `${this.firstName} say:'Hello'`
+//         }
+//     }
+//     const u1 = new User('John', 'Doe', 23, 'doe@ls.com');
+//     const u2 = new User('Diana', 'Pig', 53, 'DP@tp.com');
 
 
-    function Car(brand, maxSpeed=200){
-        this.brand = brand;
-        this.maxSpeed = maxSpeed;
-        this.speed = 0;
-        this.accelerate = function(value){
-            this.speed += value;
-            if (this.speed > maxSpeed){
-                this.speed = maxSpeed;
+
+
+//     function Car(brand, maxSpeed=200){
+//         this.brand = brand;
+//         this.maxSpeed = maxSpeed;
+//         this.speed = 0;
+//         this.accelerate = function(value){
+//             this.speed += value;
+//             if (this.speed > maxSpeed){
+//                 this.speed = maxSpeed;
+//             }
+//             return this.speed;
+//         }
+
+//         this.deaccelerate = function(value){
+//             this.speed -= value;
+//             if (this.speed < 0){
+//                 this.speed = 0;
+//             }
+//         }
+
+//         this.stop = function(){
+//             this.speed = 0;
+//             return this.stop;
+//         }
+//     }
+//     const volvo = new Car('Volvo', 250);
+
+
+
+
+// HomeWork 20-21.03
+
+function Worker(firstName, lastName, rate, days){
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.rate = rate;
+            this.days = days;   
+            this.getSalary = function(){             
+                
+                if (this.days<0 || this.rate<0){
+                    return 0;
+                }               
+                return this.days * this.rate;
             }
-            return this.speed;
         }
-
-        this.deaccelerate = function(value){
-            this.speed -= value;
-            if (this.speed < 0){
-                this.speed = 0;
+        const gastroler = new Worker('John', 'Doe', 55, 10);
+        console.log(gastroler.getSalary());
+        
+        // console.log('Salary: ' + gastroler.getSalary());
+        // 2. Написати функцію-конструктор для країни Country
+        // Країна матиме властивості:
+        // - назва
+        // - площа
+        // - кількість населення
+        // Метод, що розраховує щільність населення (кількість населення / площу країни)
+        // */
+        function Country(countryName, area, population){
+            this.countryName = countryName;
+            this.area = area;
+            this.population = population;
+            this.populationDensity = function(){
+                if (this.area < 0 || this.population < 0){
+                    return 0;
+                }
+                return this.area / this.population;
             }
         }
+        const Ukraine = new Country ('Ukraine', 603549000, 41167336);
+        console.log(Ukraine.populationDensity());
 
-        this.stop = function(){
-            this.speed = 0;
-            return this.stop;
+        // 1. Написати функцію, яка приймає число і виводить результат обчислення множення 2 на 1...до цього числа
+        // Цикл та шаблонний рядок
+
+        
+
+        function getSum(number) {
+            let result = 1;
+            for (let i = 1; i<=number; i++){
+                result = 2 * i;
+                console.log(`2 * ${i} = ${result}`);
+                
+            }
         }
-    }
-    const volvo = new Car('Volvo', 250);
+        getSum(10);
+
+
+        // 2. Написати функцію getBanned(), яка приймає об'єкт юзера і додає йому нову властивість - banned = true.
+        // В результаті повернути true.
+        // Задача на роботу з об'єктами.
+        // В якості перевірки зробіть декілька об'єктів юзерів і послідовно їх "забаньте".
+
+        const user1 = {
+            name: 'Nate',
+            lastName: 'Lasthune',
+            age: 28
+        }
+        const user2 = {
+            name: 'ramsan',
+            lastName: 'puylo',
+            age: 50
+        }
+        const user3 = {
+            name: 'Don',
+            lastName: 'Sanchos',
+            age: 44
+        }
+
+        function getBanned(obj){
+                obj.banned = true;
+                return obj.banned;
+            }
+        console.log(getBanned(user1));
+        console.log(getBanned(user2));
+        console.log(getBanned(user3));
+
