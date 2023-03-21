@@ -153,6 +153,8 @@
 //     return (num1>num2) ? num1 : num2;
 // }
 
+
+
 // function isEven(num){
 //     let rest = num % 2;
 //     if(rest===1){
@@ -163,6 +165,8 @@
 
     // return (num % 2 === 0) ? true : false;
     // return !Boolean(num % 2);
+
+
 
 // function toSquare (number){
 //     return number * number;
@@ -189,95 +193,97 @@
 
 
 
-function getMenu() {
-    let choice = prompt('Виберіть напій:1 - Чай, 2 - Кава, 3 - Сік');
-    if (choice === '1') {
-        alert("Ви обрали чай");
-    }else if (choice === '2'){
-        alert("Ви обрали каву");
-    }else if (choice === '3'){
-        alert("Ви обрали сік");
-    }else{
-        alert("Я не знаю такого напою");
-    }    
-    return choice;
-    }
-    getMenu();
-
-function getDayWeek() {
-    let choice = prompt("Виберіть день:\n1 - понеділок\n2 - вівторок\n3 - середа\n4 - четвер\n5 - п'ятниця\n6 - субота\n7 - неділя");
-        switch (choice) {
-        case "1":
-            alert("Ви обрали понеділок");
-            console.log('monday');
-            break;
-        case "2":
-            alert("Ви обрали вівторок");
-            console.log('tuesday');
-            break;
-        case "3":
-            alert("Ви обрали середа");
-            console.log('wednesday');
-            break;
-        case "4":
-            alert("Ви обрали четвер");
-            console.log('thursday');
-            break;
-        case "5":
-            alert("Ви обрали п'тниця");
-            console.log('friday');
-            break;
-        case "6":
-            alert("Ви обрали субота");
-            console.log('saturday');
-            break;
-        case "7":
-            alert("Ви обрали неділя");
-            console.log('sunday');
-            break;
-        default:
-            alert("Я не знаю такого дня");
-        }
-    }
-    getDayWeek();
+// function getMenu() {
+//     let choice = prompt('Виберіть напій:1 - Чай, 2 - Кава, 3 - Сік');
+//     if (choice === '1') {
+//         alert("Ви обрали чай");
+//     }else if (choice === '2'){
+//         alert("Ви обрали каву");
+//     }else if (choice === '3'){
+//         alert("Ви обрали сік");
+//     }else{
+//         alert("Я не знаю такого напою");
+//     }    
+//     return choice;
+//     }
+//     getMenu();
 
 
 
-    function calculator() {
-        const num1 = parseFloat(prompt('Введіть перше число:'));
-        const num2 = parseFloat(prompt('Введіть друге число:'));
-        const operation = prompt(`Виберіть дію:
-        + щоб скласти
-        - щоб відняти
-        * щоб перемножити
-        / щоб поділити`);
+// function getDayWeek() {
+//     let choice = prompt("Виберіть день:\n1 - понеділок\n2 - вівторок\n3 - середа\n4 - четвер\n5 - п'ятниця\n6 - субота\n7 - неділя");
+//         switch (choice) {
+//         case "1":
+//             alert("Ви обрали понеділок");
+//             console.log('monday');
+//             break;
+//         case "2":
+//             alert("Ви обрали вівторок");
+//             console.log('tuesday');
+//             break;
+//         case "3":
+//             alert("Ви обрали середа");
+//             console.log('wednesday');
+//             break;
+//         case "4":
+//             alert("Ви обрали четвер");
+//             console.log('thursday');
+//             break;
+//         case "5":
+//             alert("Ви обрали п'тниця");
+//             console.log('friday');
+//             break;
+//         case "6":
+//             alert("Ви обрали субота");
+//             console.log('saturday');
+//             break;
+//         case "7":
+//             alert("Ви обрали неділя");
+//             console.log('sunday');
+//             break;
+//         default:
+//             alert("Я не знаю такого дня");
+//         }
+//     }
+//     getDayWeek();
+
+
+
+    // function calculator() {
+    //     const num1 = parseFloat(prompt('Введіть перше число:'));
+    //     const num2 = parseFloat(prompt('Введіть друге число:'));
+    //     const operation = prompt(`Виберіть дію:
+    //     + щоб скласти
+    //     - щоб відняти
+    //     * щоб перемножити
+    //     / щоб поділити`);
         
-        let result;
+    //     let result;
         
-        switch(operation) {
-        case '+':
-            result = num1 + num2;
-            break;
-        case '-':
-            result = num1 - num2;
-            break;
-        case '*':
-            result = num1 * num2;
-            break;
-        case '/':
-            result = num1 / num2;
-            break;
-        default:
-            alert('Ви ввели неправильну операцію!');
-            return;
-        }
+    //     switch(operation) {
+    //     case '+':
+    //         result = num1 + num2;
+    //         break;
+    //     case '-':
+    //         result = num1 - num2;
+    //         break;
+    //     case '*':
+    //         result = num1 * num2;
+    //         break;
+    //     case '/':
+    //         result = num1 / num2;
+    //         break;
+    //     default:
+    //         alert('Ви ввели неправильну операцію!');
+    //         return;
+    //     }
         
-        console.log(`Результат: ${result}`);
-        alert(`Результат: ${result}`);
+    //     console.log(`Результат: ${result}`);
+    //     alert(`Результат: ${result}`);
         
-        return result;
-    }
-    calculator();
+    //     return result;
+    // }
+    // calculator();
 
       
 
@@ -323,7 +329,30 @@ function getDayWeek() {
  
 
 
+
+
 /* ЦИКЛИ */
+
+
+// let myAge = 0;
+
+// myAge ++;
+// console.log(`I am ${myAge}`);
+// myAge ++;
+// console.log(`I am ${myAge}`);
+// myAge ++;
+// console.log(`I am ${myAge}`);
+
+// // або
+
+// for(let myAge = 0; myAge <= 5; myAge +=1){
+//     console.log(`I am ${myAge}`);
+// }
+
+
+
+
+
 
 
 //     let counter = 0;
@@ -363,3 +392,169 @@ function getDayWeek() {
 // for(let counter = 0;counter < 10; counter++){
 //     console.log(counter);
 // }
+
+
+// 1. Написати функцію, яка приймає число і виводить результат обчислення множення 2 на 1...до цього числа
+// Цикл та шаблонний рядок
+
+// let i = 5;
+// let prod = 2*1;
+
+// function getSum() {
+//     console.log (`${i} + ${prod}`);
+// }
+// getSum()
+
+
+
+
+
+// const userPlane = {
+//     Mon: 'dantist',
+//     Tue: 'go to park',
+//     Wed: 'hard work',
+//     Thu: 'go party',
+//     Fri: 'read a book',
+//     Sat: 'stay in bad'
+
+// }
+//     const choiceDay = prompt('Який день тижня тебе цікавить?');
+//     alert (`${userPlane[choiceDay] ? userPlane[choiceDay]: 'Який день тижня тебе цікавить?'}`)
+
+
+
+//Функціїї конструктора 'this' 'new'
+
+    let car = {
+        brrand: 'Ford',
+        type: 'picup',
+        engine: 3.5,
+        capasity: 5
+    }
+
+    const isColor = 'color' in car;
+
+    for (const key in car){
+        console.log(key, car[key]);
+    }
+
+
+    const obj1 = {
+        test: 'value',
+        color: 'red',
+        waight: 5
+    } 
+
+    const obj2 = {
+        test: 'value',
+        color: 'red',
+        waight: 5
+    }
+
+    function isObjEquals(obj1, obj2){
+        for(const key in obj1){
+            if (obj1[key]===obj2[key]){
+                continue
+            }
+            return true;
+        }
+    }
+
+    const obj3 = {
+        test: 'value',
+        color: 'red',
+        waight: 5
+    } 
+
+    const obj4 = {
+
+    }
+    function isObjEquals(obj1, obj2){
+        for(const key in obj1){
+            if (obj3[key])
+                return false;
+            
+        }
+        console.log();
+    }
+
+    const cat1 = {
+        name: 'Murik',
+        age: 5,
+        color: 'red'
+    }
+    const cat2 = {
+        name: 'Barsik',
+        age: 3,
+        color: 'black'
+    }
+    const cat3 = {
+        name: 'Gogi',
+        age: 2,
+        color: 'grey'
+    }
+
+    function Cat(name, age, color){
+        // new -> створюється {}
+        this.name = name;
+        this.age = age;
+        this.color = color;
+        this.sayMeow = function(){
+            return 'MEOWWWW'
+        }
+    }
+    
+
+    const blackCat = new Cat('Thor',3,'violet')
+    const topCat = new Cat('Chico',7,'pink')
+
+
+    const cat5 = {
+        name: 'Ramses',
+        age: 7,
+        color: 'grey',
+        askForFood: function(){
+            return `${this.name} wants to eat`;
+        }
+    }
+
+    function User(firstName, lastName, age, email){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        this.email = email;
+        this.sayHello = function(){
+            return `${this.firstName} say:'Hello'`
+        }
+    }
+    const u1 = new User('John', 'Doe', 23, 'doe@ls.com');
+    const u2 = new User('Diana', 'Pig', 53, 'DP@tp.com');
+
+
+
+
+    function Car(brand, maxSpeed=200){
+        this.brand = brand;
+        this.maxSpeed = maxSpeed;
+        this.speed = 0;
+        this.accelerate = function(value){
+            this.speed += value;
+            if (this.speed > maxSpeed){
+                this.speed = maxSpeed;
+            }
+            return this.speed;
+        }
+
+        this.deaccelerate = function(value){
+            this.speed -= value;
+            if (this.speed < 0){
+                this.speed = 0;
+            }
+        }
+
+        this.stop = function(){
+            this.speed = 0;
+            return this.stop;
+        }
+    }
+    const volvo = new Car('Volvo', 250);
