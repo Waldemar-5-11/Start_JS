@@ -205,8 +205,9 @@ function getDayWeek() {
     */
     
 
-//Доопрацювати калькулятор
-    function getCalc() {
+//Доопрацювати калькулятор (done)
+// /*
+function getCalc() {
     let a = Number(prompt('type first number'));
     let b = Number(prompt('type second number'));
     let action = prompt ('Choose operation');
@@ -243,7 +244,7 @@ function getDayWeek() {
     }    
 
     getCalc();
-
+*/
 
 /* ЦИКЛИ */
 /* let myAge = 0;
@@ -471,86 +472,87 @@ const userPlane = {
 
 
  //HomeWork 20-21.03
-// function Worker(firstName, lastName, rate, days){
-//             this.firstName = firstName;
-//             this.lastName = lastName;
-//             this.rate = rate;
-//             this.days = days;   
-//             this.getSalary = function(){             
+/*
+    function Worker(firstName, lastName, rate, days){
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.rate = rate;
+            this.days = days;   
+            this.getSalary = function(){             
                 
-//                 if (this.days<0 || this.rate<0){
-//                     return 0;
-//                 }               
-//                 return this.days * this.rate;
-//             }
-//         }
-//         const gastroler = new Worker('John', 'Doe', 55, 10);
-//         console.log(gastroler.getSalary());
+                if (this.days<0 || this.rate<0){
+                    return 0;
+                }               
+                return this.days * this.rate;
+            }
+        }
+        const gastroler = new Worker('John', 'Doe', 55, 10);
+        console.log(gastroler.getSalary());
         
-//         // console.log('Salary: ' + gastroler.getSalary());
-//         // 2. Написати функцію-конструктор для країни Country
-//         // Країна матиме властивості:
-//         // - назва
-//         // - площа
-//         // - кількість населення
-//         // Метод, що розраховує щільність населення (кількість населення / площу країни)
-//         // */
-//         function Country(countryName, area, population){
-//             this.countryName = countryName;
-//             this.area = area;
-//             this.population = population;
-//             this.populationDensity = function(){
-//                 if (this.area < 0 || this.population < 0){
-//                     return 0;
-//                 }
-//                 return this.area / this.population;
-//             }
-//         }
-//         const Ukraine = new Country ('Ukraine', 603549000, 41167336);
-//         console.log(Ukraine.populationDensity());
+        // console.log('Salary: ' + gastroler.getSalary());
+        // 2. Написати функцію-конструктор для країни Country
+        // Країна матиме властивості:
+        // - назва
+        // - площа
+        // - кількість населення
+        // Метод, що розраховує щільність населення (кількість населення / площу країни)
+        // 
+        function Country(countryName, area, population){
+            this.countryName = countryName;
+            this.area = area;
+            this.population = population;
+            this.populationDensity = function(){
+                if (this.area < 0 || this.population < 0){
+                    return 0;
+                }
+                return this.area / this.population;
+            }
+        }
+        const Ukraine = new Country ('Ukraine', 603549000, 41167336);
+        console.log(Ukraine.populationDensity());
 
-//         // 1. Написати функцію, яка приймає число і виводить результат обчислення множення 2 на 1...до цього числа
-//         // Цикл та шаблонний рядок
+        // 1. Написати функцію, яка приймає число і виводить результат обчислення множення 2 на 1...до цього числа
+        // Цикл та шаблонний рядок
 
         
 
-//         function getSum(number) {
-//             let result = 1;
-//             for (let i = 1; i<=number; i++){
-//                 result = 2 * i;
-//                 console.log(`2 * ${i} = ${result}`);
+        function getSum(number) {
+            let result = 1;
+            for (let i = 1; i<=number; i++){
+                result = 2 * i;
+                console.log(`2 * ${i} = ${result}`);
                 
-//             }
-//         }
-//         getSum(10);
+            }
+        }
+        getSum(10);
 
 
-//         // 2. Написати функцію getBanned(), яка приймає об'єкт юзера і додає йому нову властивість - banned = true.
-//         // В результаті повернути true.
-//         // Задача на роботу з об'єктами.
-//         // В якості перевірки зробіть декілька об'єктів юзерів і послідовно їх "забаньте".
+        // 2. Написати функцію getBanned(), яка приймає об'єкт юзера і додає йому нову властивість - banned = true.
+        // В результаті повернути true.
+        // Задача на роботу з об'єктами.
+        // В якості перевірки зробіть декілька об'єктів юзерів і послідовно їх "забаньте".
 
-//         const user1 = {
-//             name: 'Nate',
-//             lastName: 'Lasthune',
-//             age: 28
-//         }
-//         const user2 = {
-//             name: 'ramsan',
-//             lastName: 'puylo',
-//             age: 50
-//         }
-//         const user3 = {
-//             name: 'Don',
-//             lastName: 'Sanchos',
-//             age: 44
-//         }
+        const user1 = {
+            name: 'Nate',
+            lastName: 'Lasthune',
+            age: 28
+        }
+        const user2 = {
+            name: 'ramsan',
+            lastName: 'puylo',
+            age: 50
+        }
+        const user3 = {
+            name: 'Don',
+            lastName: 'Sanchos',
+            age: 44
+        }
 
-//         function getBanned(obj){
-//                 obj.banned = true;
-//                 return obj.banned;
-//             }
-//         console.log(getBanned(user1));
-//         console.log(getBanned(user2));
-//         console.log(getBanned(user3));
-
+        function getBanned(obj){
+                obj.banned = true;
+                return obj.banned;
+            }
+        console.log(getBanned(user1));
+        console.log(getBanned(user2));
+        console.log(getBanned(user3));
+*/
