@@ -67,3 +67,145 @@ if (totalPrice2) {
     console.log(totalPrice2);
 }
 
+
+
+const getSumTwoNumbers = function(namber1, namber2){
+    if(
+    typeof namber1 !== 'namber' ||
+    typeof namber1 !== 'namber' ||
+    isNaN(namber1) ||
+    isNaN(namber2) 
+    ){
+        return null;
+    }
+
+    const result = namber1 + namber2;
+
+    return result;
+}
+    const res = getSumTwoNumbers();
+    console.log(res);
+
+
+
+//HW 10.04
+//   1 створити функцію, яка буде повертати найбільше число з двох
+//   2* створити функцію яка приймає число та перевіряє його на парність (четность)
+
+function getMaxNumber(number1, number2) {
+    if (number1 > number2) {
+    return number1;
+    } else {
+    return number2;
+    }
+}
+
+  // Приклад використання:
+let number1 = 10;
+let number2 = 20;
+
+let maxNumber = getMaxNumber(number1, number2);
+console.log("Max number: " + maxNumber);
+
+//2*
+
+function checkParity(number) {
+    if (number % 2 === 0) {
+    return "Number " + number + " is even.";
+    } else {
+    return "Number " + number + " is odd.";
+    }
+}
+
+  // Приклад використання:
+let number = 10;
+
+let result = checkParity(number);
+console.log(result);
+
+
+//за допомогою циклу вивести у console.log() парні числа від 0 до 10
+let i = 0;
+while (i <= 10) {
+if (i % 2 === 0) {
+    console.log(i);
+}
+i++;
+}
+//цикл за допомогою for
+for (let i = 0; i <= 10; i++) {
+    if (i % 2 === 0) {
+    console.log(i);
+    }
+}
+
+
+const SAVED_PASSWORD = 'mypassword'; // Збережений пароль
+let attempts = 5; // Кількість спроб
+let userAnswer;
+
+for (let i = attempts; i > 0; i--) {
+    userAnswer = prompt("Enter your password"); // Запит користувачу на введення паролю
+    if (userAnswer === SAVED_PASSWORD) {
+        alert('Ви впорались за '+ (attempts + 1)+ ' спроб');
+        console.log("Password correct!");
+        break; // Вийти з циклу, якщо пароль правильний
+    } else {
+        alert('Ви не впорались за '+ (attempts + 1)+ ' спроб');
+        console.log("Password incorrect. Attempts left: " + (i - 1));
+        if (i === 1) {
+            console.log("You've reached the maximum number of attempts.");
+        }
+    }
+}
+
+//HW 11.04
+//зробіть наступні завдання за допомогою усіх циклів:
+//виведіть числа від 30 до 0 (у порядку зменшення)
+//знайдіть суму всіх чисел від 0 до 100 (1+2+3+...+99+100)
+
+// //Цикл "while":
+// let i = 30;
+// while (i >= 0) {
+// console.log(i);
+// i--;
+// }
+// //
+// let sum = 0;
+// let i = 0;
+// while (i <= 100) {
+// sum += i;
+// i++;
+// }
+// console.log(sum);
+
+
+// //Цикл "do...while":
+// let i = 30;
+// do {
+// console.log(i);
+// i--;
+// } while (i >= 0);
+// //
+// let sum = 0;
+// let i = 0;
+// do {
+// sum += i;
+// i++;
+// } while (i <= 100);
+// console.log(sum);
+
+// //Цикл "for":
+// for (let i = 30; i >= 0; i--) {
+//     console.log(i);
+// }
+// //
+// let sum = 0;
+// for (let i = 0; i <= 100; i++) {
+// sum += i;
+// }
+// console.log(sum);
+
+
+
+
