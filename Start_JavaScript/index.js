@@ -1,211 +1,141 @@
 // Start JS with Kyrylo
 
-//HW 07/04
-/*Завдання на if ... else
-Користувач придбав товар у магазині, у якому діє наступна система знижок: при загальній сумі покупок більше ніж 500 грн. застосовується знижка 5%, а якщо чек більше ніж 1500 то знижка складатиме 10%. Запитайте у користувача ціню його покупки та виведіть йому підсумкову ціну з урахуванням можливої знижки.
+//Object
 
-Завдання на switch
-Покупець хоче купити продукт з магазину. В магазині за кожним продуктом закріплена ціна за одиницю. Запитайте у користувача який саме товар і в якій кількості він хоче придбати та поверніть вартість покупки. Ціни товарів зберігайте у окремих змінних
+const obj = {
+    display: 'flex',
+    justifyContent: 'center',
+    lineHaight:1.5,
+};
 
-Bonus task
-після виконання завдань зробіть функції, які мають містити логіку завдань, але замість простого виводу результати розрахунків потрібно повертати з функцій 
-*/
+const vykladach = {
+    name : 'Kyrylo',
+    height: 1.8,
+    weight: 80,
+    isMale: true,
+    ps: {
+        cpu:{
+            manufacturer: 'AMD',
+            model: 'Ryzen 2700'
+        },
+        ram:16,
+    },
+    password: 'admin',
+    email: 'test@test.ua'
+};
+
+const phone = {
+    color: 'black',
+    price: 11000,
+    call: function (somebody) {
+    console.log('calling'+ somebody) 
+    },
+
+}
+
+const obj1 = {};
+const obj2 = Object();
+const obj3 = new Object();
+
+const dog = {
+    color: 'grey',
+    weight: 11,
+    breed: 'French bulldog',
+    nickname: 'Lusy',
+    age: 3,
+    isSleeping: false,
+}
+console.log('Dog '+ dog.nickname + ' '+ dog.age+ 'year');
+
+//зміна властивостей обєкту
+let age = 5;
+age+=2;
+
+dog.age++;
+dog.color = 'black';
+//додавання властивостуй обєкту
+dog.isFemale = true;
+
+//видалення даних обєкта
+delete dog.isFemale;
+dog.isSleeping = undefined;
 
 
-//Завдання на if ... else
-function calculateTotalPrice(userBuy) {
-    let discount;
+//CW
+console.log(dog);
+dog.isFemale = true;
+dog.color = 'blue-tiger';
+dog.age -= 0.5;
+console.log(dog);
 
-    if (userBuy > 1500) {
-      discount = userBuy * 0.1;
-    } else if (userBuy > 500) {
-      discount = userBuy * 0.05;
-    } else {
-    discount = 0;
+const Dog = function (nickname, age, color,weight) {
+//debugger;
+this.nickname=nickname;
+this.age=age;
+this.color=color;
+this.weight=weight;
+
+this.gav = function () {
+    console.log('gav');
+}
+};
+const constructedDog = new Dog ('test', 2, 'black', 7);
+
+//HW 12.04
+// Функція конструктора для об'єктів користувачів
+function User(firstName, lastName, gender, age) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.gender = gender;
+    this.age = age;
+
+    // Метод speak
+    this.speak = function() {
+    console.log("Привіт, мене звати " + this.firstName + " " + this.lastName + "!");
+    };
+
+    // Властивість повного імені
+    Object.defineProperty(this, 'fullName', {
+    get: function() {
+        return this.firstName + " " + this.lastName;
     }
-
-    let totalPrice = userBuy - discount;
-    
-    return totalPrice;
+    });
 }
 
-let userBuy = prompt('Enter your purchase price');
-let totalPrice = calculateTotalPrice(userBuy);
+  // Приклад використання
+let user1 = new User("Іван", "Петров", "чоловіча", 25);
+  console.log("Ім'я: " + user1.firstName); // Ім'я: Іван
+  console.log("Прізвище: " + user1.lastName); // Прізвище: Петров
+  console.log("Стать: " + user1.gender); // Стать: чоловіча
+  console.log("Вік: " + user1.age); // Вік: 25
+  console.log("Повне ім'я: " + user1.fullName); // Повне ім'я: Іван Петров
+  user1.speak(); // Привіт, мене звати Іван Петров!
 
-alert(totalPrice);
-console.log(totalPrice);
 
-//Завдання на switch
-function calculateTotalPrice2(product, quantity) {
-    let price;
+//CW 13.04
 
-    switch (product) {
-    case 'apple':
-        price = 10;
-        break;
-    case 'milk':
-        price = 15;
-        break;
-    case 'fish':
-        price = 25;
-        break;
-    default:
-        console.log('Invalid product');
-    }
-
-    if (price) {
-      let total = price * quantity;
-    return `Total price for ${quantity} ${product}(s) is ${total}`;
-    }
+  // functional expression
+const sum1 = function (num1, num2){
+    return num1 + num2;
+}
+// functional declaration
+function sum2 (num1, num2){
+    return num1 + num2;
 }
 
-let product = prompt('Enter product name');
-let quantity = +prompt('Enter quantity');
-let totalPrice2 = calculateTotalPrice2(product, quantity);
+//Шаблоний рядок
+let a = 10;
+let b = 15;
+alert(`${a} + ${b} = ${a+b}`);
 
-if (totalPrice2) {
-    console.log(totalPrice2);
+const pan = {
+    firstName: 'test',
+    lastName: 'Testetko',
+    age:99,
+    isMale: true
 }
-
-
-
-const getSumTwoNumbers = function(namber1, namber2){
-    if(
-    typeof namber1 !== 'namber' ||
-    typeof namber1 !== 'namber' ||
-    isNaN(namber1) ||
-    isNaN(namber2) 
-    ){
-        return null;
-    }
-
-    const result = namber1 + namber2;
-
-    return result;
+function hello (pan){
+    console.log(`'Hello' ${pan.firstName} + ${pan.lastName}}`);
+    return `'Hello' ${pan.firstName}  ${pan.lastName} `;
 }
-    const res = getSumTwoNumbers();
-    console.log(res);
-
-
-
-//HW 10.04
-//   1 створити функцію, яка буде повертати найбільше число з двох
-//   2* створити функцію яка приймає число та перевіряє його на парність (четность)
-
-function getMaxNumber(number1, number2) {
-    if (number1 > number2) {
-    return number1;
-    } else {
-    return number2;
-    }
-}
-
-  // Приклад використання:
-let number1 = 10;
-let number2 = 20;
-
-let maxNumber = getMaxNumber(number1, number2);
-console.log("Max number: " + maxNumber);
-
-//2*
-
-function checkParity(number) {
-    if (number % 2 === 0) {
-    return "Number " + number + " is even.";
-    } else {
-    return "Number " + number + " is odd.";
-    }
-}
-
-  // Приклад використання:
-let number = 10;
-
-let result = checkParity(number);
-console.log(result);
-
-
-//за допомогою циклу вивести у console.log() парні числа від 0 до 10
-let i = 0;
-while (i <= 10) {
-if (i % 2 === 0) {
-    console.log(i);
-}
-i++;
-}
-//цикл за допомогою for
-for (let i = 0; i <= 10; i++) {
-    if (i % 2 === 0) {
-    console.log(i);
-    }
-}
-
-
-const SAVED_PASSWORD = 'mypassword'; // Збережений пароль
-let attempts = 5; // Кількість спроб
-let userAnswer;
-
-for (let i = attempts; i > 0; i--) {
-    userAnswer = prompt("Enter your password"); // Запит користувачу на введення паролю
-    if (userAnswer === SAVED_PASSWORD) {
-        alert('Ви впорались за '+ (attempts + 1)+ ' спроб');
-        console.log("Password correct!");
-        break; // Вийти з циклу, якщо пароль правильний
-    } else {
-        alert('Ви не впорались за '+ (attempts + 1)+ ' спроб');
-        console.log("Password incorrect. Attempts left: " + (i - 1));
-        if (i === 1) {
-            console.log("You've reached the maximum number of attempts.");
-        }
-    }
-}
-
-//HW 11.04
-//зробіть наступні завдання за допомогою усіх циклів:
-//виведіть числа від 30 до 0 (у порядку зменшення)
-//знайдіть суму всіх чисел від 0 до 100 (1+2+3+...+99+100)
-
-// //Цикл "while":
-// let i = 30;
-// while (i >= 0) {
-// console.log(i);
-// i--;
-// }
-// //
-// let sum = 0;
-// let i = 0;
-// while (i <= 100) {
-// sum += i;
-// i++;
-// }
-// console.log(sum);
-
-
-// //Цикл "do...while":
-// let i = 30;
-// do {
-// console.log(i);
-// i--;
-// } while (i >= 0);
-// //
-// let sum = 0;
-// let i = 0;
-// do {
-// sum += i;
-// i++;
-// } while (i <= 100);
-// console.log(sum);
-
-// //Цикл "for":
-// for (let i = 30; i >= 0; i--) {
-//     console.log(i);
-// }
-// //
-// let sum = 0;
-// for (let i = 0; i <= 100; i++) {
-// sum += i;
-// }
-// console.log(sum);
-
-
-
 
