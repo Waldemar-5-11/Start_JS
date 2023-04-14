@@ -139,3 +139,45 @@ function hello (pan){
     return `'Hello' ${pan.firstName}  ${pan.lastName} `;
 }
 
+const testObject = {
+    100: 'secret text',
+    abc: true,
+    'some text': 525252,
+  };
+  
+  // console.log(testObject);
+  // console.log(testObject.100);
+  
+  // console.log(testObject[100]);
+  // console.log(testObject['100']);
+  
+  // console.log(testObject['abc']);
+  // console.log(testObject['some text']);
+  
+  const myKey = 'some text';
+  
+  console.log(testObject[50 + 50]);
+  
+  // const userKey = prompt('Введіть назву ключу');
+  // const userValue = prompt('Введіть значення');
+  
+  // testObject[userKey] = userValue;
+  // // testObject.promptValue = userValue;
+
+  const user = {
+    firstName: 'Test',
+    lastName: 'Testenko',
+    age: 125,
+    isMale: true,
+  };
+  
+  console.log(user);
+  // console.log(user[field]);
+  
+  let field = 'age';
+  user[field] = false;
+  user.age = false;
+  
+  // alert()
+  // window.alert()
+  // window['alert']()
